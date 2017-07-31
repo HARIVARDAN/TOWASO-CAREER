@@ -2,12 +2,12 @@ html{
     background-color: #f3f3f3;
 }
 
-
+@media(min-width: 600px){
 
   .left {
   float: left;
  width: 540px;
-  text-align: center;
+  
   margin: 2px 10px;
   display: inline-block;
  
@@ -16,13 +16,13 @@ html{
 .right {
      width: 540px;
   float: left;
-  text-align: center;
+ 
   margin: 2px ;
 
   display: inline-block;
 }
 
-
+}
 .form-basic{
     max-width: 100%;
     margin: 0 auto;
@@ -31,21 +31,21 @@ html{
    display: inline-block;
     background-color:  #ffffff;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
- margin-right: 40px;
-   margin-left: 40px;
+ margin-right: 30px;
+   margin-left: 35px;
    margin-top: 0px;
     font: bold 14px sans-serif;
-    text-align: center;
+    
     border : 2px solid orange;
 }
 
 .form-basic .form-row{
-    text-align: center;
+   
     margin-bottom: 12px;
 }
 
 .form-basic .form-title-row{
-    text-align: center;
+
     margin-bottom: 45px;
     background-color: orange;
 }
@@ -88,9 +88,9 @@ html{
     width: 90%;
     text-align: left;
     vertical-align: top;
-    padding: 12px 25px;
+    padding-bottom: 5px;
 }
-
+.form-basic input[type=textarea],
 .form-basic input{
     color:  #5f5f5f;
     box-sizing: border-box;
@@ -118,7 +118,11 @@ html{
 
 .form-basic input[type=textarea]{
     margin-top: 13px;
-    font-size: 18px;
+    font-size: 22px;
+}
+
+textarea {
+    font-size: inherit;
 }
 
 .form-basic select{

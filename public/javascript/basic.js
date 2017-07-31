@@ -36,10 +36,14 @@ $(document).ready(function(){
 
 					},
 
+					resumeURL_meta : {
+						required : true
+					},
+
 					answer1 :{
 						required  : true
 					},
-
+                  
 					answer2 : {
 						required : true
 					}
@@ -68,22 +72,38 @@ $(document).ready(function(){
 					},
 
 					answer1 : {
-						required : "THis answer is required"
+						required : "This answer is required"
 					},
 
-					answer1 : {
-						required : "THis answer is required"
+					resumeURL : {
+						required : "Please Upload your Resume(PDF format)"
+					},
+					resumeURL_meta : {
+						required : "Please Upload your Resume(PDF format)"
+					},
+                     answer1 : {
+						required : "This answer is required"
+					},
+
+
+					answer2 : {
+						required : "This answer is required"
 					}
 
 
 				},
 
 				submitHandler : function(){
-					form.submit();
+
+					if($('#resumeURL').val()=="" || $('#resumeURL').val()==null ){
+					alert("Upload ypur Resume");
                 }
-		});
+                  else{
+                  	form.submit();
+                  }
+		}
 				
- 
+  });
 });
 
 
@@ -150,6 +170,7 @@ uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
 }, function() {
   // Upload completed successfully, now we can get the download URL
     downloadURL = uploadTask.snapshot.downloadURL;
+     $('#resumeURL_meta').val(downloadURL);
   $('#resumeURL').val(downloadURL);
    return downloadURL;
 });
