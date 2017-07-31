@@ -1,0 +1,132 @@
+{{#if user}}
+ <section id="bd" >
+  
+    
+        <div class="main-content">
+
+     
+        <form id="form" class="form-basic" method="post" action='/{{ user.posturl }}'>
+         
+        
+          
+            <div class="form-title-row">
+               
+              
+              {{{user.department }}}
+
+              
+            </div>
+         
+         <div id="common" class="left">
+
+            <div class="form-row">
+                <label>
+                    <span>Full name</span>
+                    <input type="text" name="name">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email">
+                </label>
+            </div>
+
+             <div class="form-row">
+                <label>
+                    <span>Mobile</span>
+                    <input type="tel" name="mobile">
+                </label>
+            </div>
+
+             <div class="form-row">
+                <label>
+                    <span>Institute</span>
+                    <input type="text" name="institution">
+                </label>
+            </div>
+
+             <div class="form-row">
+                <label>
+                    <span>Discipline</span>
+                    <input type="text" name="discipline">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Year</span>
+                    <input type="text" name="year">
+                </label>
+            </div>
+
+             <div class="form-row">
+                <label>
+                    <span>Location</span>
+                    <input type="text" name="location">
+                </label>
+            </div>
+          <div style="display:none;" class="form-row">
+                <label>
+                    <span>Resume</span>
+                    <input type="text" id="resumeURL" name="resumeURL">
+                </label>
+            </div>
+         
+
+            </div>
+
+            <div id="other" class="right" >
+
+               <div class="form-row">
+                <label>
+                    <span>Why do you think you are fit for this?</span>
+                    <textarea name="answer1"></textarea>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>How do you think you will contribute to ToWaSo?</span>
+                    <textarea name="answer2"></textarea>
+                </label>
+            </div>
+
+            
+
+             <div class="form-row">
+                <label>
+                    <span>{{ user.question }}</span>
+                    <textarea name="answer3"></textarea>
+                </label>
+            </div>
+
+            {{{ user.extraquestion }}}
+
+               <div class="form-row">
+                <label>
+                    <span>Upload Resume</span>
+                    <input id="file" type="file" name="file">
+                    <p id="progress"> </p>
+                </label>
+                </div>
+
+                
+          
+            </div>
+           <br/><br/>
+            <div class="form-row" style="margin-left:15%;margin-top:2%;">
+                <button id="next" type="submit">Submit</button>
+            </div>
+    </form>
+
+   </div> 
+
+  </section> 
+
+   
+
+  
+
+{{/if}}
